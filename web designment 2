@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sierra Football Agency</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: #f5f5f5;
+        }
+
+        /* HEADER */
+        header{
+            background: #0a3d62;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo{
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        nav a{
+            margin-left: 20px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero{
+            height: 60vh;
+            background: url('https://via.placeholder.com/1200x600?text=Sierra+Football+Agency') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            text-shadow: 5px 5px 12px black;
+            background-color: rgba(0, 0, 0, 0, 5);
+            background-blend-mode: darken;
+        }
+
+        /* Sections */
+        section{
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        h2{
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #0a3d62;
+        }
+
+        /* Cards */
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        .card{
+            width: 260px;
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 12px #ccc;
+        }
+
+        .player-img{
+            width: 100%;
+            border-radius: 8px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Search Bar */
+        .search-box{
+            margin: 20px auto;
+            width: 60%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input{
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #0a3d62;
+            border-radius: 8px;
+        }
+
+        footer{
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">Sierra Football Agency</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#players">Players</a>
+        <a href="#matches">Matches</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1>Welcome to Sierra Football Agency</h1>
+    <p>Developing football talents across Sierra Leone.</p>
+</section>
+
+<!-- INTRODUCTION -->
+<section>
+    <h2>Introduction</h2>
+    <p>Sierra Football Agency helps players build careers, gain exposure, and reach professional levels.</p>
+</section>
+
+<!-- NEWS -->
+<section>
+    <h2>Latest News</h2>
+    <div class="card-container">
+        <div class="card"><h3>New Talents Signed</h3><p>5 new young stars join SFA.</p></div>
+        <div class="card"><h3>European Partnership</h3><p>SFA partners with top European academies.</p></div>
+        <div class="card"><h3>Upcoming Training Camp</h3><p>2025 Camp begins next month.</p></div>
+    </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section>
+    <h2>Highlights</h2>
+    <div class="card-container">
+        <div class="card">⚽ Top Scorers 2025</div>
+        <div class="card">🏆 Youth Cup Winners</div>
+        <div class="card">📸 Match Photos</div>
+    </div>
+</section>
+
+<!-- PLAYERS PAGE -->
+<section id="players">
+    <h2>Our Players</h2>
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" id="playerSearch" placeholder="Search for players..." onkeyup="searchPlayers()">
+    </div>
+
+    <div class="card-container" id="playerList">
+
+        <!-- MUSA TOMBO -->
+        <div class="card player">
+            <img src="musa tombo.jpg" class="player-img">
+            <h3>Musa Noah Kamara (Musa Tombo)</h3>
+            <p>Position: Striker</p>
+            <p>Age: 25</p>
+            <p>Current Club: Free Agent</p>
+        </div>
+
+        <!-- MAMUD FOFANAH -->
+        <div class="card player">
+            <img src="lampard.jpg" class="player-img">
+            <h3>Mamud Fofanah</h3>
+            <p>Position: Midfielder</p>
+            <p>Age: 28</p>
+            <p>Current Club: Free Agent</p>
+        </div>
+
+        <!-- DAUDA KAMARA -->
+        <div class="card player">
+            <img src="dauda.jpg" class="player-img">
+            <h3>Dauda Kamara</h3>
+            <p>Position: Goalkeeper</p>
+            <p>Age: 18</p>
+            <p>Current Club: East End Lions</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- MATCHES PAGE -->
+<section id="matches">
+    <h2>Match Fixtures</h2>
+
+    <!-- SEARCH BAR -->
+    <div class="search-box">
+        <input type="text" id="matchSearch" placeholder="Search for fixtures..." onkeyup="searchMatches()">
+    </div>
+
+    <div class="card-container" id="matchList">
+        <div class="card match">SFA vs East End Lions — Jan 12</div>
+        <div class="card match">SFA vs Bo Rangers — Jan 20</div>
+        <div class="card match">SFA vs Ports Authority — Feb 2</div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Us</h2>
+    <h3>History</h3>
+    <p>Sierra Football Agency was established to support talented footballers across Sierra Leone and West Africa. The agency began with a mission to identify young, skilled players and connect them with professional opportunities locally and internationally. Over the years it has grown into a leading institution in player development, carrer management, football promotion.</p>
+    <p>SFA develops and represents young football talent across Sierra Leone.</p>
+    <h3>Mission</h3>
+    <p>Our mission is to discover, develop, and empower football talents by providing professional guidance, carrer support, and international exposure. We aim to help players unlock their full potential and achieve long term success both on and off the field.</p>
+    <h3>Vision</h3>
+    <p>Our vision is to become the leading football agency in Africa, recognized for players excellence in player development, transparency, and professionalism. We aim to build a future where every talented footballer has the opportunity to shine on the global stage</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: sfaagency@gmail.com</p>
+    <p>Phone: +232 76 000000</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Sierra Football Agency. All rights reserved.
+</footer>
+
+<!-- JAVASCRIPT SEARCH -->
+<script>
+function searchPlayers(){
+    let input = document.getElementById('playerSearch').value.toLowerCase();
+    let players = document.getElementsByClassName('player');
+
+    for(let i = 0; i < players.length; i++){
+        let name = players[i].innerText.toLowerCase();
+        players[i].style.display = name.includes(input) ? "" : "none";
+    }
+}
+
+function searchMatches(){
+    let input = document.getElementById('matchSearch').value.toLowerCase();
+    let matches = document.getElementsByClassName('match');
+
+    for(let i = 0; i < matches.length; i++){
+        let fixture = matches[i].innerText.toLowerCase();
+        matches[i].style.display = fixture.includes(input) ? "" : "none";
+    }
+}
+</script>
+
+</body>
+</html> 
+
+
+
+✅ 1. index.html — HOME PAGE
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sierra Leone Football Agency - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">Sierra Leone Football Agency SL</a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="players.html">Players</a>
+      <a href="matches.html">Matches</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Sierra Leone Football Agency</h1>
+      <p>Representing top talents across Sierra Leone.</p>
+      <a class="btn" href="players.html">View Players</a>
+    </div>
+  </section>
+
+  <section class="features container">
+    <article>
+      <h3>Latest News</h3>
+      <p>Youth prospect signed from Makeni.</p>
+    </article>
+    <article>
+      <h3>Upcoming Matches</h3>
+      <p>See fixtures on the Matches page.</p>
+    </article>
+    <article>
+      <h3>Contact</h3>
+      <p>Reach out for representation and inquiries.</p>
+    </article>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© Sierra Leone Football Agency Sierra Leone</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
